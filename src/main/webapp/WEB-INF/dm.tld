@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+	<tlibversion>1.0</tlibversion>
+	<shortname>dm</shortname>
+	<info>ejemplos del tutorial de introducción al desarrollo de etiquetas
+		para JSP 2.1</info>
+	<tag>
+		<name>helloWorld</name>
+		<tagclass>com.danielme.blog.jsptags.HelloWorldTag</tagclass>
+		<info>imprime un hello world en negrita</info>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>printText</name>
+		<tagclass>com.danielme.blog.jsptags.PrintTextTag</tagclass>
+		<info>imprime la cadena recibida en negrita (opcionalmente)</info>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>cadenaObligatoria</name>
+			<description>cadena que se imprimirá como resultado de la ejecución de la etiqueta</description>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>bold</name>
+			<description>indica si la cadena proporcionada se mostrará en negrita</description>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>toUpperCase</name>
+		<tagclass>com.danielme.blog.jsptags.ToUpperCaseTag</tagclass>
+		<info>Convierte a mayúsculas el cuerpo de la etiqueta</info>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>printList</name>
+		<tagclass>com.danielme.blog.jsptags.PrintListTag</tagclass>
+		<info>Crea una lista sin orden con los elementos anidados</info>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>listElement</name>
+		<tagclass>com.danielme.blog.jsptags.ListElementTag</tagclass>
+		<info>Elemento de la lista</info>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<description>elemento para la lista</description>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+</taglib>
